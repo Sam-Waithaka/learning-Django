@@ -5,8 +5,9 @@
         <h1>This is the body</h1>
         <p>this is where you put stuff that should be in the body</p>
 
-        {%for list_item in list_of_values%}
-            {{list_item}}<br />
+        {%for question in questions%}
+            <h3>{{question.title}} || {{question.priority}}</h3>
+            <p style="margin-left: 10px;">{{question.question}}</p>
         {%  endfor %}
 
         {% include 'personal/snippets/body_snippet.html' %}
